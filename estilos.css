@@ -16,7 +16,15 @@ body {
 	margin: auto;
 	padding: 40px 0;
 
-	
+	/*Flexbox 
+	display: flex;
+	gap: 20px; */
+
+	/* Grid */
+	display: grid; 
+	grid-template-columns: 3fr 1fr;
+
+
 }
 
 .titulo {
@@ -25,7 +33,18 @@ body {
 }
 
 .contenedor-conciertos {
+	/* flexbox 
+	width: 70%;
+	display: flex; 
+	flex-wrap:wrap ; 
+	gap: 20px;*/	
+	/* Haciendo esto se ponen uno de lado de otro */
+	/*Sin esta propiedad no se aplica el width de .card con esta propiedad, si no caben los elementos, automaticamente los agrupa debajo*/
 	
+	/* Grid */
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);	/* 3 columnas de un tamaño de una fraccion */
+	gap: 20px; /*Tamaño de espaciado  */
 }
 
 .card {
@@ -37,14 +56,25 @@ body {
 	overflow: hidden;
 	background-size: cover;
 	background-position: center center;
-
-	
+/*flexbox
+	width: calc(33.33% - 20px) ; */
 }
 
 .card .textos {
 	height: 100%;
-	
-	
+
+
+	/* Grid 
+
+	display: flex;
+	grid-template-rows: 1fr auto;*/
+
+	/*flexbox*/
+	display: flex;
+	flex-direction: column;	
+	justify-content: space-between; 	
+/* para q un elemento quede arriba del otro */
+/* agrupo el segundo texto por debajo de todo con un between */
 }
 
 .banner {
@@ -54,7 +84,19 @@ body {
 	background-size: cover;
 	background-position: center center;
 
+	/* Grid 
+	
+	display: grid;
+	grid-template-rows: auto auto auto ;
+	align-items: center;*/
 
+	 	
+	/* flexbox */
+	width: 30%;  /*lo que resta del 70% en el contenedor lo usamos aqui*/
+	display: flex;
+	flex-direction: column;	
+	justify-content: space-between;
+	
 }
 
 .banner ul {
