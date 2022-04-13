@@ -8,6 +8,7 @@ body {
 	background: #1D202B;
 	color: #fff;
 	font-family: 'Roboto', sans-serif;
+	min-height: 100vh;
 }
 
 .contenedor {
@@ -123,11 +124,31 @@ body {
 }
 
 @media screen and (max-width: 900px) {
-	
+	.contenedor{
+		grid-template-columns: repeat(6, 1fr);
+    	grid-gap: 2px;
+	}
+	.contenedor-conciertos{
+		width: auto;
+		grid-template-columns: repeat(6, 1fr);
+    	grid-gap: 2px;
+	}
+	.banner {
+		max-width: 30%;
+		max-height: auto;
+	}
 }
 
 @media screen and (max-width: 700px) {
-	
+	.contenedor{
+		grid-template-columns: repeat(6, 1fr);
+    	grid-gap: 2px;
+	}
+	.contenedor-conciertos{
+		grid-template-columns: repeat(6, 1fr);
+    	grid-gap: 2px;
+	}
+
 }
 
 @media screen and (max-width: 600px) {
